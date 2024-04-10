@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 100px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container input[type="text"],
+        .container input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .container input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4caf50;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>회원가입</h2>
+        <form action="/register" method="POST" id="user-form">
+            <input type="text" id="userid" placeholder="아이디" required><br>
+            <input type="text" id="username" placeholder="사용자명" required><br>
+            <input type="password" id="password" placeholder="비밀번호" required><br>
+            <input type="password" id="confirmPassword" placeholder="비밀번호 확인" required><br>
+            <button type="submit">가입하기</button>
+        </form>
+    </div>
+    <script src = "https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/register.js"></script>
+</body>
+</html>
