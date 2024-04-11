@@ -15,14 +15,15 @@
 
 document.querySelector('#user-form').addEventListener('submit', async (e)=> {
     e.preventDefault();
-    const id = e.target.userid.value;
-    const name = e.target.username.value;
+    const userid = e.target.userid.value;
+    console.log(e.target);
+    const username = e.target.username.value;
     const password = e.target.password.value;
     const confirmPassword = e.target.confirmPassword.value;
-    if(!id){
+    if(!userid){
         return alert('아이디를 입력하세요');
     }
-    if(!name){
+    if(!username){
         return alert('닉네임을 입력하세요');
     }
     if(password !== confirmPassword){

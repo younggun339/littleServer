@@ -12,12 +12,12 @@ router.route('/')
 })
 .post(async (req, res, next) => {
     try{
-        const user = await User.create({
+        const user = await User.findOne({
             name : req.body.name,
             password : req.body.password,
         });
         console.log(user);
-        res.status(201).json(user);
+        // res.status(201).json(user);
     } catch(err){
         console.error(err);
         next(err);

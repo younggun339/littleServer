@@ -13,13 +13,14 @@ class User extends Sequelize.Model {
                 allowNull : false,
             },
             password: {
-                type: Sequelize.STRING, // VARCHAR 타입으로 설정
+                type: Sequelize.STRING(255), // VARCHAR 타입으로 설정
                 allowNull: false,
-                set(value) {
-                    // 비밀번호를 해싱하여 저장
-                    // const hashedPassword = hashFunction(value);
-                    // this.setDataValue('password', hashedPassword);
-                }},
+                // set(value) {
+                //     // 비밀번호를 해싱하여 저장
+                //     // const hashedPassword = hashFunction(value);
+                //     // this.setDataValue('password', hashedPassword);
+                // }},
+            },
             created_at: {
                 type: Sequelize.DATE,
                 allowNull : false,
